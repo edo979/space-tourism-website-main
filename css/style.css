@@ -1,5 +1,29 @@
 /* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+.bg-dark {
+  background-color: #0c0e18;
+}
+
+.bg-accent {
+  background-color: #d2d8f9;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-dark {
+  color: #0c0e18;
+}
+
+.text-accent {
+  color: #d2d8f9;
+}
+
+.text-white {
+  color: white;
+}
+
 *,
 *::before,
 *::after {
@@ -170,6 +194,29 @@ p {
   line-height: 1.1;
 }
 
+.container {
+  width: max(18.17em, 10vw);
+  margin-inline: auto;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.flex {
+  display: flex;
+  align-items: var(--align, center);
+  justify-content: var(--justify, space-between);
+  gap: var(--gap, 1rem);
+}
+
+@media (min-width: 35em) {
+  .container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    width: min(80rem, 90vw);
+  }
+}
 .numbered-title {
   font-family: var(--ff-sans-cond);
   font-size: var(--fs-500);

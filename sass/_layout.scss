@@ -1,0 +1,23 @@
+.container {
+  width: max(18.17em, 10vw);
+  margin-inline: auto;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.flex {
+  display: flex;
+  align-items: var(--align, center);
+  justify-content: var(--justify, space-between);
+  gap: var(--gap, 1rem);
+}
+
+@include mq($md-bp) {
+  .container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    width: min(80rem, 90vw);
+  }
+}

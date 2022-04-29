@@ -3,3 +3,32 @@
 $black: hsl(230 35% 7%);
 $accent: hsl(231 77% 90%);
 $white: hsl(0 0% 100%);
+
+.bg-dark {
+  background-color: $black;
+}
+.bg-accent {
+  background-color: $accent;
+}
+.bg-white {
+  background-color: $white;
+}
+
+.text-dark {
+  color: $black;
+}
+.text-accent {
+  color: $accent;
+}
+.text-white {
+  color: $white;
+}
+
+$md-bp: 35em;
+$lg-bp: 45em;
+
+@mixin mq($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
