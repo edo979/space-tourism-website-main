@@ -4,3 +4,9 @@
 @import 'typography';
 @import 'layout';
 @import 'components/components';
+
+body {
+  min-height: 100vh;
+
+  background-color: $black;
+}
