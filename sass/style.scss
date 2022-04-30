@@ -1,12 +1,13 @@
 @use 'vars' as *;
 
+body {
+  min-height: 100vh;
+
+  background-color: hsl(var(--clr-dark));
+}
+
 @import 'reset';
 @import 'typography';
 @import 'layout';
 @import 'components/components';
-
-body {
-  min-height: 100vh;
-
-  background-color: $black;
-}
+@import 'pages/pages';
