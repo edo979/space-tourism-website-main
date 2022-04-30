@@ -129,17 +129,23 @@
         </div>
       </section>
 
-      <section>
-        <h2>03 INTERACTIVE ELEMENTS</h2>
-        <div>
-          <nav>
-            <ul>
-              <li>00 ACTIVE</li>
-              <li>01 HOVERED</li>
-              <li>02 IDLE</li>
+      <section class="interactive-elements container flow">
+        <h2 class="numbered-title"><span>03</span> INTERACTIVE ELEMENTS</h2>
+        <div class="flow">
+          <nav class="nav">
+            <ul class="nav_list underline-indicators flex">
+              <li class="nav_item active">
+                <a href="#" class="nav_link"><span>00</span> ACTIVE</a>
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_link"><span>01</span> HOVERED</a>
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_link"><span>02</span> IDLE</a>
+              </li>
             </ul>
           </nav>
-          <p>Different States of Navigation Bar</p>
+          <p class="text-accent">Different States of Navigation Bar</p>
         </div>
 
         <div>
@@ -156,10 +162,11 @@
 
           <div>
             <div>
-              <div>
-                <button>MOON</button>
-                <button>MARS</button>
-                <button>EUROPA</button>
+              <!-- Tabs -->
+              <div class="tab-list underline-indicators flex">
+                <button class="active" aria-selected="true">Moon</button>
+                <button aria-selected="false">Mars</button>
+                <button aria-selected="false">Europa</button>
               </div>
               <p>Tabs (Active, Hover, & Idle)</p>
             </div>

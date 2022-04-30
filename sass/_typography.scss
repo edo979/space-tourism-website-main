@@ -13,6 +13,10 @@
   --fs-400: 1.125rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
+
+  --ls-1: 4.75px;
+  --ls-2: 2.7px;
+  --ls-3: 2.35px;
 }
 
 body {
@@ -42,13 +46,13 @@ p {
 }
 
 .letter-spacing-1 {
-  letter-spacing: 4.75px;
+  letter-spacing: var(--ls-1);
 }
 .letter-spacing-2 {
-  letter-spacing: 2.7px;
+  letter-spacing: var(--ls-2);
 }
 .letter-spacing-3 {
-  letter-spacing: 2.35px;
+  letter-spacing: var(--ls-3);
 }
 
 .uppercase {

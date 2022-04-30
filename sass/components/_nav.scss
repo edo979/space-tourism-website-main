@@ -1,0 +1,24 @@
+.nav {
+  &_list {
+    margin: 0;
+    padding: 0;
+
+    justify-content: start;
+
+    --underline-gap: 2rem;
+
+    list-style: none;
+  }
+
+  &_link {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: var(--l);
+    color: hsl(var(--clr-white));
+
+    span {
+      font-weight: 700;
+      margin-right: 0.5em;
+    }
+  }
+}
