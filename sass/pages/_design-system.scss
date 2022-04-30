@@ -16,4 +16,17 @@
       }
     }
   }
+
+  .typography {
+    margin-top: 4rem;
+
+    .flex {
+      align-items: start;
+      --gap: 4rem;
+
+      &_column {
+        width: 100%;
+      }
+    }
+  }
 }

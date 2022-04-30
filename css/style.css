@@ -206,7 +206,7 @@ p {
 }
 
 .container {
-  width: max(18.17em, 10vw);
+  width: max(327px, 90vw);
   margin-inline: auto;
 }
 
@@ -225,7 +225,7 @@ p {
   .container {
     padding-inline: 2em;
     margin-inline: auto;
-    width: min(80rem, 90vw);
+    width: min(80rem, 100%);
   }
 }
 .numbered-title {
@@ -249,6 +249,16 @@ p {
 }
 .design-system .color_value span {
   color: hsl(var(--clr-accent));
+}
+.design-system .typography {
+  margin-top: 4rem;
+}
+.design-system .typography .flex {
+  align-items: start;
+  --gap: 4rem;
+}
+.design-system .typography .flex_column {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

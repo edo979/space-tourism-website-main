@@ -1,5 +1,5 @@
 .container {
-  width: max(18.17em, 10vw);
+  width: max(327px, 90vw);
   margin-inline: auto;
 }
 
@@ -18,6 +18,6 @@
   .container {
     padding-inline: 2em;
     margin-inline: auto;
-    width: min(80rem, 90vw);
+    width: min(80rem, 100%);
   }
 }
