@@ -16,7 +16,7 @@
 
       <section class="colors container">
         <h2 class="numbered-title"><span>01</span> Colors</h2>
-        <div class="flex">
+        <div class="flex mt-1">
           <div class="flow color" style="flex-grow: 1">
             <div class="color_title">#0B0D17</div>
             <p class="color_value"><span>RGB</span> 11, 13, 23</p>
@@ -148,19 +148,13 @@
           <p class="text-accent">Different States of Navigation Bar</p>
         </div>
 
-        <div>
-          <div>
-            <div>
-              <a href="#">EXPLORE</a>
-              <p>Landing Page Main Button - Idle</p>
-            </div>
-            <div>
-              <a href="#">EXPLORE</a>
-              <p>Landing Page Main Button - Hover</p>
-            </div>
+        <div class="flex" style="--align: start; --justify: start; --gap: 4rem">
+          <div class="flow">
+            <a href="#" class="large-button mt-5">EXPLORE</a>
+            <p class="text-accent">Landing Page Main Button - Idle</p>
           </div>
 
-          <div>
+          <div class="flow" style="--flow-space: 4rem">
             <div>
               <!-- Tabs -->
               <div class="tab-list underline-indicators flex">
@@ -168,7 +162,7 @@
                 <button aria-selected="false">Mars</button>
                 <button aria-selected="false">Europa</button>
               </div>
-              <p>Tabs (Active, Hover, & Idle)</p>
+              <p class="text-accent mt-1">Tabs (Active, Hover, & Idle)</p>
             </div>
 
             <div>

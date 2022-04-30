@@ -30,6 +30,12 @@
     }
   }
 
+  .nav {
+    &_list {
+      --gap: 8rem;
+    }
+  }
+
   .interactive-elements {
     margin-top: 4rem;
   }
