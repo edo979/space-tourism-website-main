@@ -11,10 +11,11 @@
   }
 
   &_link {
+    font-family: var(--ff-sans-cond);
+    color: hsl(var(--clr-white));
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: var(--ls-2);
-    color: hsl(var(--clr-white));
 
     span {
       font-weight: 700;

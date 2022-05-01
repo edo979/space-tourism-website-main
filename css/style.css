@@ -112,12 +112,12 @@ select {
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
   --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
+  --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
   --ls-1: 4.75px;
@@ -209,7 +209,7 @@ p {
 }
 
 .container {
-  width: max(327px, 90vw);
+  width: max(327px, 86vw);
   margin-inline: auto;
 }
 
@@ -283,10 +283,11 @@ p {
   list-style: none;
 }
 .nav_link {
+  font-family: var(--ff-sans-cond);
+  color: hsl(var(--clr-white));
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: var(--ls-2);
-  color: hsl(var(--clr-white));
 }
 .nav_link span {
   font-weight: 700;
@@ -360,7 +361,7 @@ p {
 .large-button {
   position: relative;
   z-index: 1;
-  display: grid;
+  display: inline-grid;
   place-items: center;
   padding: 0 2em;
   border-radius: 50%;
