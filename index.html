@@ -15,14 +15,12 @@
     <title>Space tourism</title>
   </head>
   <body class="home">
-    <nav class="nav flex container">
+    <nav class="nav flex container" aria-label="Primary navigation">
       <div class="nav_logo">
         <img src="./assets/shared/logo.svg" alt="" />
       </div>
 
-      <button></button>
-
-      <ul class="nav_list underline-indicators flex">
+      <ul id="primary-navigation" class="nav_list underline-indicators flex">
         <li class="nav_item active">
           <a href="#" class="nav_link"><span>00</span> Home</a>
         </li>
@@ -33,9 +31,17 @@
           <a href="#" class="nav_link"><span>02</span> Crew</a>
         </li>
         <li class="nav_item">
-          <a href="#" class="nav_link"><span>02</span> Technology</a>
+          <a href="#" class="nav_link"><span>03</span> Technology</a>
         </li>
       </ul>
+
+      <button
+        class="nav_toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
     </nav>
 
     <header class="container lg:grid-container">
@@ -57,5 +63,6 @@
         <a href="#" class="large-button">Explore</a>
       </div>
     </header>
+    <script src="script.js"></script>
   </body>
 </html>

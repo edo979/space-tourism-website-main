@@ -32,6 +32,7 @@
 
   .nav {
     &_list {
+      flex-direction: row;
       --gap: 8rem;
     }
   }
