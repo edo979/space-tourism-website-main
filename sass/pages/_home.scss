@@ -1,0 +1,17 @@
+.home {
+  background-image: url(../assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+
+  h1 {
+    span {
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+
+  header {
+    text-align: center;
+  }
+}

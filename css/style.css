@@ -116,10 +116,10 @@ select {
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
-  --fs-600: 1rem;
-  --fs-500: 1.75rem;
+  --fs-600: 1.25rem;
+  --fs-500: 1rem;
   --fs-400: 0.9375rem;
-  --fs-300: 1rem;
+  --fs-300: 0.9rem;
   --fs-200: 0.875rem;
   --ls-1: 4.75px;
   --ls-2: 2.7px;
@@ -259,7 +259,7 @@ p {
 }
 
 .nav {
-  margin-top: 24px;
+  padding-top: 24px;
 }
 
 @media (min-width: 35em) {
@@ -463,6 +463,20 @@ p {
   --justify: center;
 }
 .design-system .interactive-elements .text-accent {
+  text-align: center;
+}
+
+.home {
+  background-image: url(../assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+.home h1 span {
+  display: block;
+  margin-top: 1rem;
+}
+.home header {
   text-align: center;
 }
 
