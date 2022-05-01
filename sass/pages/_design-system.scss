@@ -38,5 +38,15 @@
 
   .interactive-elements {
     margin-top: 4rem;
+
+    .underline-indicators {
+      justify-content: center;
+    }
+    .dots-indicators {
+      --justify: center;
+    }
+    .text-accent {
+      text-align: center;
+    }
   }
 }
