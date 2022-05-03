@@ -27,3 +27,22 @@ tabListEl.addEventListener('keydown', (e) => {
     tabListEl.children[currentTab].focus()
   }
 })
+
+Array.from(tabListEl.children).forEach((tab, i) =>
+  tab.addEventListener('click', (e) => {
+    currentTab = i
+    setActiveTab(e.target)
+  })
+)
+
+function setActiveTab(clickedTab) {
+  Array.from(tabListEl.children).forEach((tab) => {
+    tab.setAttribute('aria-selected', false)
+    tab.setAttribute('tabindex', '-1')
+  })
+
+  clickedTab.setAttribute('aria-selected', true)
+  clickedTab.setAttribute('tabindex', '0')
+}
+
+//function setTabContent() {}
