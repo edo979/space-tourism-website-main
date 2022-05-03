@@ -480,4 +480,10 @@ p {
   text-align: center;
 }
 
+.destination_info h2 {
+  font-size: var(--fs-800);
+  font-family: var(--ff-serif);
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=style.css.map */
