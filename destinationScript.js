@@ -56,6 +56,7 @@ function setTabContent(tabData) {
   const tabPanel = document.querySelector('[role="tabpanel"]'),
     tabPicture = document.querySelector('picture')
 
+  tabPanel.id = `${tabData.name.toLowerCase()}-tab`
   tabPanel.innerHTML = `
     <h2>${tabData.name}</h2>
     <p>
