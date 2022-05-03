@@ -2,23 +2,14 @@
 // set content
 const tabListEl = document.querySelector('[role="tablist"]')
 
-let currentTab = 0
+let currentTab = 0,
+  data = {}
 init()
 
 async function init() {
-  const data = await getContent('destinations')
+  data = await getContent('destinations')
 
-  setContent(data)
-}
-
-async function setActiveTab(clickedTab) {
-  Array.from(tabListEl.children).forEach((tab) => {
-    tab.setAttribute('aria-selected', false)
-    tab.setAttribute('tabindex', '-1')
-  })
-
-  clickedTab.setAttribute('aria-selected', true)
-  clickedTab.setAttribute('tabindex', '0')
+  setContent()
 }
 
 async function getContent(contentCategory) {
@@ -37,8 +28,9 @@ async function getContent(contentCategory) {
   }
 }
 
-function setContent(data) {
+function setContent() {
   setTabsName(data.map((destination) => destination.name))
+  setTabContent(data[currentTab])
   setEventListeners()
 }
 
@@ -57,6 +49,29 @@ function setTabsName(names) {
   })
 
   tabListEl.innerHTML = tabsName
+}
+
+function setTabContent(tabData) {
+  const tabPanel = document.querySelector('[role="tabpanel"]')
+
+  tabPanel.innerHTML = `
+    <h2>${tabData.name}</h2>
+    <p>
+     ${tabData.description}
+    </p>
+
+    <div class="destination_meta flex">
+      <div>
+        <h3>Avg. distance</h3>
+        <p>${tabData.distance}</p>
+      </div>
+
+      <div>
+        <h3>Est. travel time</h3>
+        <p>${tabData.travel}</p>
+      </div>
+    </div>
+  `
 }
 
 function setEventListeners() {
@@ -91,4 +106,16 @@ function setEventListeners() {
       setActiveTab(e.target)
     })
   )
+}
+
+function setActiveTab(clickedTab) {
+  Array.from(tabListEl.children).forEach((tab) => {
+    tab.setAttribute('aria-selected', false)
+    tab.setAttribute('tabindex', '-1')
+  })
+
+  clickedTab.setAttribute('aria-selected', true)
+  clickedTab.setAttribute('tabindex', '0')
+
+  setTabContent(data[currentTab])
 }
