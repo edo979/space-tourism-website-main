@@ -1,14 +1,15 @@
 // when clicked for first time load data
 // set content
-const tabListEl = document.querySelector('[role="tablist"]')
+const tabListEl = document.querySelector('[role="tablist"]'),
+  context = tabListEl.dataset.context
 
 let currentTab = 0,
-  data = {}
+  data = {} // for specific page (use html data- attribute and context variable)
 
 init()
 
 async function init() {
-  data = await getContent('destinations')
+  data = await getContent(context)
 
   setContent()
 }
@@ -54,27 +55,12 @@ function setTabsName(names) {
 
 function setTabContent(tabData) {
   const tabPanel = document.querySelector('[role="tabpanel"]'),
-    tabPicture = document.querySelector('picture')
+    tabPicture = document.querySelector('picture'),
+    template = getTemplate(context)
 
   tabPanel.id = `${tabData.name.toLowerCase()}-tab`
-  tabPanel.innerHTML = `
-    <h2>${tabData.name}</h2>
-    <p>
-     ${tabData.description}
-    </p>
 
-    <div class="destination_meta flex">
-      <div>
-        <h3>Avg. distance</h3>
-        <p>${tabData.distance}</p>
-      </div>
-
-      <div>
-        <h3>Est. travel time</h3>
-        <p>${tabData.travel}</p>
-      </div>
-    </div>
-  `
+  tabPanel.innerHTML = template(tabData)
 
   tabPicture.innerHTML = `
     <source srcset=${tabData.images.webp} type="image/webp" />
@@ -123,4 +109,31 @@ function setEventListeners() {
       setTabContent(data[currentTab])
     })
   )
+}
+
+function getTemplate(context) {
+  switch (context) {
+    case 'destinations':
+      return (data) => ` 
+          <h2>${data.name}</h2>
+          <p>
+          ${data.description}
+          </p>
+
+          <div class="destination_meta flex">
+            <div>
+              <h3>Avg. distance</h3>
+              <p>${data.distance}</p>
+            </div>
+
+            <div>
+              <h3>Est. travel time</h3>
+              <p>${data.travel}</p>
+            </div>
+          </div>
+        `
+
+    default:
+      return '<p>Error on server</p>'
+  }
 }
