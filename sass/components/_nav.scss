@@ -53,6 +53,10 @@
     background-repeat: no-repeat;
   }
 
+  &_item {
+    cursor: auto !important;
+  }
+
   .colapsed + &_toggle {
     position: fixed;
     right: 1rem;

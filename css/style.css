@@ -320,6 +320,9 @@ p {
   background-image: url(../assets/shared/icon-hamburger.svg);
   background-repeat: no-repeat;
 }
+.nav_item {
+  cursor: auto !important;
+}
 .colapsed + .nav_toggle {
   position: fixed;
   right: 1rem;
