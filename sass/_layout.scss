@@ -3,6 +3,11 @@
   margin-inline: auto;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr minmax(327px, 86vw) 1fr;
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }

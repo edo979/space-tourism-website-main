@@ -1,7 +1,70 @@
 .destination {
+  background-image: url(../../assets/destination/background-destination-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  // Grid Layout:
+  .grid-container {
+    margin-bottom: 2rem;
+
+    grid-template-areas:
+      '. title .'
+      '. image .'
+      '. tabs .'
+      '. content .';
+
+    justify-items: center;
+  }
+
+  h1 {
+    grid-area: title;
+  }
+  picture {
+    grid-area: image;
+    margin-top: 2rem;
+  }
+  .tab-list {
+    grid-area: tabs;
+  }
+  article {
+    grid-area: content;
+  }
+
+  // Components:
+
   &_info {
+    margin-top: 1rem;
+    text-align: center;
+
+    > p {
+      color: hsl(var(--clr-accent));
+    }
+
     h2 {
       font-size: var(--fs-800);
+      font-family: var(--ff-serif);
+      text-transform: uppercase;
+    }
+  }
+
+  &_meta {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid hsl(var(--clr-white) / 0.15);
+    flex-direction: column;
+
+    h3 {
+      font-family: var(--ff-sans-cond);
+      font-size: var(--fs-200);
+      color: hsl(var(--clr-accent));
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-top: 0.5rem;
+
+      font-size: var(--fs-700);
       font-family: var(--ff-serif);
       text-transform: uppercase;
     }
