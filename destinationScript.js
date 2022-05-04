@@ -1,5 +1,3 @@
-// when clicked for first time load data
-// set content
 const tabListEl = document.querySelector('[role="tablist"]'),
   context = tabListEl.dataset.context
 
@@ -31,7 +29,7 @@ async function getContent(contentCategory) {
 }
 
 function setContent() {
-  setTabsName(data.map((destination) => destination.name))
+  setTabsName(data.map((content) => content.name))
   setTabContent(data[currentTab])
   setEventListeners()
 }
