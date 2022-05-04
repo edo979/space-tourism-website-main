@@ -30,13 +30,11 @@
               ><span>01</span> Destination</a
             >
           </li>
-          <li class="nav_item active">
-            <a href="#" class="nav_link"><span>02</span> Crew</a>
-          </li>
           <li class="nav_item">
-            <a href="technology.html" class="nav_link"
-              ><span>03</span> Technology</a
-            >
+            <a href="crew.html" class="nav_link"><span>02</span> Crew</a>
+          </li>
+          <li class="nav_item active">
+            <a href="#" class="nav_link"><span>03</span> Technology</a>
           </li>
         </ul>
 
@@ -52,31 +50,27 @@
 
     <main class="container flow mt-1">
       <h1 class="numbered-title">
-        <span aria-hidden="true">02</span>Meet your crew
+        <span aria-hidden="true">01</span>Pick your destination
       </h1>
+
+      <picture>
+        <source srcset="assets/destination/image-moon.webp" type="image/webp" />
+        <img src="assets/destination/image-moon.png" alt="the moon" />
+      </picture>
+
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        aria-label="destination-list"
+        data-context="technology"
+      ></div>
 
       <article
         class="destination_info"
         id="moon-tab"
         tabindex="0"
         role="tabpanel"
-      >
-        <h2></h2>
-        <p></p>
-        <p></p>
-      </article>
-
-      <div
-        class="tab-list dots-indicators flex"
-        role="tablist"
-        aria-label="crew-list"
-        data-context="crew"
-      ></div>
-
-      <picture>
-        <source srcset="assets/destination/image-moon.webp" type="image/webp" />
-        <img src="assets/destination/image-moon.png" alt="the moon" />
-      </picture>
+      ></article>
     </main>
 
     <script src="script.js"></script>

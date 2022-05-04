@@ -146,6 +146,13 @@ function getTemplate(context) {
         <p>${data.bio}</p>
       `
 
+    case 'technology':
+      return (data) => `
+        <h2>The Terminology..</h2>
+        <p>${data.name}</p>
+        <p>${data.description}</p>
+      `
+
     default:
       return '<p>Error on server</p>'
   }
