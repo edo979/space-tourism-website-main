@@ -130,6 +130,12 @@ function getTemplate(context) {
             </div>
           </div>
         `
+    case 'crew':
+      return (data) => `
+        <h2>${data.role}</h2>
+        <p>${data.name}</p>
+        <p>${data.bio}</p>
+      `
 
     default:
       return '<p>Error on server</p>'
