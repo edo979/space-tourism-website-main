@@ -65,7 +65,7 @@ function setTabContent(tabData) {
     tabPicture = document.querySelector('picture'),
     template = getTemplate(context)
 
-  tabPanel.id = `${tabData.name.toLowerCase()}-tab`
+  tabPanel.id = `${tabData.name.replace(/\s+/g, '-').toLowerCase()}-tab`
 
   tabPanel.innerHTML = template(tabData)
 
