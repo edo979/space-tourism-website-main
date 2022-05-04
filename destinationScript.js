@@ -36,6 +36,15 @@ function setContent() {
 
 function setTabsName(names) {
   let tabsName = ''
+  const tabText = (name, i) => {
+    if (context == 'destinations') {
+      return name
+    } else if (context == 'crew') {
+      return `<span class="sr-only">${name}</span>`
+    } else if (context == 'technology') {
+      return i
+    }
+  }
 
   names.forEach((name, i) => {
     tabsName += `<button
@@ -44,7 +53,7 @@ function setTabsName(names) {
       aria-controls="${name.toLowerCase()}-tab"
       tabindex="${i == 0 ? '0' : '-1'}"
     >
-      ${name}
+    ${tabText(name, i)}
     </button>`
   })
 
