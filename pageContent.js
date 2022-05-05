@@ -69,7 +69,12 @@ function setTabContent(tabData) {
 
   tabPanel.innerHTML = template(tabData)
 
-  if (context !== 'technology') {
+  if (context == 'technology') {
+    tabPicture.innerHTML = `
+    <source srcset=${tabData.images.landscape} media="(max-width: 992px)" />
+    <img src=${tabData.images.portrait} alt="the ${tabData.name}" />
+  `
+  } else {
     tabPicture.innerHTML = `
     <source srcset=${tabData.images.webp} type="image/webp" />
     <img src=${tabData.images.png} alt="the ${tabData.name}" />

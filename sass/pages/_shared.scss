@@ -17,14 +17,21 @@ h1 {
 picture {
   grid-area: image;
   margin-top: 2rem;
-  img {
-    max-width: 60%;
-    margin-inline: auto;
-  }
 }
 [role='tablist'] {
   grid-area: tabs;
 }
 article {
   grid-area: content;
+}
+
+// Components:
+.destination,
+.crew {
+  picture {
+    img {
+      max-width: 60%;
+      margin-inline: auto;
+    }
+  }
 }
