@@ -50,7 +50,7 @@ function setTabsName(names) {
     tabsName += `<button
       aria-selected="${i == 0 ? true : false}"
       role="tab"
-      aria-controls="${name.toLowerCase()}-tab"
+      aria-controls="${name.replace(/\s+/g, '-').toLowerCase()}-tab"
       tabindex="${i == 0 ? '0' : '-1'}"
     >
     ${tabText(name, i)}
