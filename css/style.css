@@ -608,6 +608,10 @@ article {
 
 .technology {
   padding-bottom: 2rem;
+  background-image: url(../assets/technology/background-technology-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .technology .grid-container {
   grid-template-areas: ". title ." "image image image" ". tabs ." ". content .";
