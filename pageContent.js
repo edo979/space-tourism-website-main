@@ -141,8 +141,10 @@ function getTemplate(context) {
         `
     case 'crew':
       return (data) => `
-        <h2>${data.role}</h2>
-        <p>${data.name}</p>
+        <header>
+          <h2>${data.role}</h2>
+          <p>${data.name}</p>
+        </header>
         <p>${data.bio}</p>
       `
 

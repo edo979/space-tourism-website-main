@@ -19,6 +19,10 @@
   picture {
     grid-area: image;
     margin-top: 2rem;
+    img {
+      max-width: 60%;
+      margin-inline: auto;
+    }
   }
   .tab-list {
     grid-area: tabs;
