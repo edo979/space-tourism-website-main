@@ -609,6 +609,12 @@ article {
 .technology .grid-container {
   grid-template-areas: ". title ." "image image image" ". tabs ." ". content .";
 }
+.technology picture {
+  width: 100%;
+}
+.technology picture img {
+  height: calc(75px + 25.5vw);
+}
 .technology .numbered-indicators {
   --flex-dir: row;
   --justify: center;
@@ -616,6 +622,9 @@ article {
 .technology .numbered-indicators > * {
   width: 40px;
   font-size: var(--fs-500);
+}
+.technology_info {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
