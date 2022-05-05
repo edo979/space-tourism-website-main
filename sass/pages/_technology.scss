@@ -1,4 +1,17 @@
 .technology {
+  // Layout:
+  .grid-container {
+    grid-template-areas:
+      '. title .'
+      'image image image'
+      '. tabs .'
+      '. content .';
+  }
+
+  &_img {
+    grid-area: image;
+  }
+
   .numbered-indicators {
     --flex-dir: row;
     --justify: center;

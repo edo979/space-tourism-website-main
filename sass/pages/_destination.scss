@@ -1,6 +1,8 @@
 .destination {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   // Grid Layout:
   .grid-container {

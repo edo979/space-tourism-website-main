@@ -1,36 +1,30 @@
-.destination,
-.crew {
-  // Grid Layout:
-  .grid-container {
-    margin-bottom: 2rem;
+// Grid Layout:
+.grid-container {
+  margin-bottom: 2rem;
 
-    grid-template-areas:
-      '. title .'
-      '. image .'
-      '. tabs .'
-      '. content .';
+  grid-template-areas:
+    '. title .'
+    '. image .'
+    '. tabs .'
+    '. content .';
 
-    justify-items: center;
-  }
+  justify-items: center;
+}
 
-  h1 {
-    grid-area: title;
+h1 {
+  grid-area: title;
+}
+picture {
+  grid-area: image;
+  margin-top: 2rem;
+  img {
+    max-width: 60%;
+    margin-inline: auto;
   }
-  picture {
-    grid-area: image;
-    margin-top: 2rem;
-    img {
-      max-width: 60%;
-      margin-inline: auto;
-    }
-  }
-  .tab-list {
-    grid-area: tabs;
-  }
-  article {
-    grid-area: content;
-  }
-
-  background-repeat: no-repeat;
-  background-position: center;
+}
+[role='tablist'] {
+  grid-area: tabs;
+}
+article {
+  grid-area: content;
 }
