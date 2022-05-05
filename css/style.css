@@ -544,4 +544,28 @@ p {
   text-transform: uppercase;
 }
 
+.destination .grid-container,
+.crew .grid-container {
+  margin-bottom: 2rem;
+  grid-template-areas: ". title ." ". image ." ". tabs ." ". content .";
+  justify-items: center;
+}
+.destination h1,
+.crew h1 {
+  grid-area: title;
+}
+.destination picture,
+.crew picture {
+  grid-area: image;
+  margin-top: 2rem;
+}
+.destination .tab-list,
+.crew .tab-list {
+  grid-area: tabs;
+}
+.destination article,
+.crew article {
+  grid-area: content;
+}
+
 /*# sourceMappingURL=style.css.map */

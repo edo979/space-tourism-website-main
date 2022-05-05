@@ -1,0 +1,29 @@
+.destination,
+.crew {
+  // Grid Layout:
+  .grid-container {
+    margin-bottom: 2rem;
+
+    grid-template-areas:
+      '. title .'
+      '. image .'
+      '. tabs .'
+      '. content .';
+
+    justify-items: center;
+  }
+
+  h1 {
+    grid-area: title;
+  }
+  picture {
+    grid-area: image;
+    margin-top: 2rem;
+  }
+  .tab-list {
+    grid-area: tabs;
+  }
+  article {
+    grid-area: content;
+  }
+}
