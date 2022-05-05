@@ -42,7 +42,7 @@ function setTabsName(names) {
     } else if (context == 'crew') {
       return `<span class="sr-only">${name}</span>`
     } else if (context == 'technology') {
-      return i
+      return i + 1
     }
   }
 

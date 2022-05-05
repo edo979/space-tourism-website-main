@@ -384,7 +384,7 @@ p {
 }
 
 .numbered-indicators {
-  flex-direction: column;
+  flex-direction: var(--flex-dir, column);
   --align: center;
 }
 .numbered-indicators > * {
@@ -605,6 +605,15 @@ p {
 .crew .crew_info > p {
   margin-top: 1rem;
   color: hsl(var(--clr-accent));
+}
+
+.technology .numbered-indicators {
+  --flex-dir: row;
+  --justify: center;
+}
+.technology .numbered-indicators > * {
+  width: 40px;
+  font-size: var(--fs-500);
 }
 
 /*# sourceMappingURL=style.css.map */

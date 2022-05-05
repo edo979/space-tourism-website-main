@@ -1,0 +1,11 @@
+.technology {
+  .numbered-indicators {
+    --flex-dir: row;
+    --justify: center;
+
+    > * {
+      width: 40px;
+      font-size: var(--fs-500);
+    }
+  }
+}

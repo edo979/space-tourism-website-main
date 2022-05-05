@@ -54,7 +54,7 @@
 }
 
 .numbered-indicators {
-  flex-direction: column;
+  flex-direction: var(--flex-dir, column);
   --align: center;
 
   & > * {
