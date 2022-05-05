@@ -157,8 +157,10 @@ function getTemplate(context) {
 
     case 'technology':
       return (data) => `
-        <h2>The Terminology..</h2>
-        <p>${data.name}</p>
+        <header>
+          <h2>The Terminology...</h2>
+          <p>${data.name}</p>
+        </header>
         <p>${data.description}</p>
       `
 

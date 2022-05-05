@@ -1,4 +1,5 @@
 .technology {
+  padding-bottom: 2rem;
   // Layout:
   .grid-container {
     grid-template-areas:
@@ -9,7 +10,6 @@
   }
 
   // Components:
-
   picture {
     width: 100%;
     img {
@@ -29,5 +29,24 @@
 
   &_info {
     text-align: center;
+    header {
+      text-transform: uppercase;
+      h2 {
+        font-family: var(--ff-sans-cond);
+        font-size: var(--fs-300);
+        color: hsl(var(--clr-accent));
+        letter-spacing: var(--ls-3);
+      }
+      p {
+        margin-top: 0.25rem;
+        font-family: var(--ff-serif);
+        font-size: 1.5rem;
+      }
+    }
+
+    > p {
+      margin-top: 1rem;
+      color: hsl(var(--clr-accent));
+    }
   }
 }

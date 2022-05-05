@@ -606,6 +606,9 @@ article {
   color: hsl(var(--clr-accent));
 }
 
+.technology {
+  padding-bottom: 2rem;
+}
 .technology .grid-container {
   grid-template-areas: ". title ." "image image image" ". tabs ." ". content .";
 }
@@ -625,6 +628,24 @@ article {
 }
 .technology_info {
   text-align: center;
+}
+.technology_info header {
+  text-transform: uppercase;
+}
+.technology_info header h2 {
+  font-family: var(--ff-sans-cond);
+  font-size: var(--fs-300);
+  color: hsl(var(--clr-accent));
+  letter-spacing: var(--ls-3);
+}
+.technology_info header p {
+  margin-top: 0.25rem;
+  font-family: var(--ff-serif);
+  font-size: 1.5rem;
+}
+.technology_info > p {
+  margin-top: 1rem;
+  color: hsl(var(--clr-accent));
 }
 
 /*# sourceMappingURL=style.css.map */
