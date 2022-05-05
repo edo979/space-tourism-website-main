@@ -489,6 +489,40 @@ p {
   text-align: center;
 }
 
+.destination,
+.crew {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.destination .grid-container,
+.crew .grid-container {
+  margin-bottom: 2rem;
+  grid-template-areas: ". title ." ". image ." ". tabs ." ". content .";
+  justify-items: center;
+}
+.destination h1,
+.crew h1 {
+  grid-area: title;
+}
+.destination picture,
+.crew picture {
+  grid-area: image;
+  margin-top: 2rem;
+}
+.destination picture img,
+.crew picture img {
+  max-width: 60%;
+  margin-inline: auto;
+}
+.destination .tab-list,
+.crew .tab-list {
+  grid-area: tabs;
+}
+.destination article,
+.crew article {
+  grid-area: content;
+}
+
 .destination {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
   background-size: cover;
@@ -571,40 +605,6 @@ p {
 .crew .crew_info > p {
   margin-top: 1rem;
   color: hsl(var(--clr-accent));
-}
-
-.destination,
-.crew {
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.destination .grid-container,
-.crew .grid-container {
-  margin-bottom: 2rem;
-  grid-template-areas: ". title ." ". image ." ". tabs ." ". content .";
-  justify-items: center;
-}
-.destination h1,
-.crew h1 {
-  grid-area: title;
-}
-.destination picture,
-.crew picture {
-  grid-area: image;
-  margin-top: 2rem;
-}
-.destination picture img,
-.crew picture img {
-  max-width: 60%;
-  margin-inline: auto;
-}
-.destination .tab-list,
-.crew .tab-list {
-  grid-area: tabs;
-}
-.destination article,
-.crew article {
-  grid-area: content;
 }
 
 /*# sourceMappingURL=style.css.map */

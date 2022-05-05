@@ -69,10 +69,14 @@ function setTabContent(tabData) {
 
   tabPanel.innerHTML = template(tabData)
 
-  tabPicture.innerHTML = `
+  if (context == 'technology') {
+    tabPicture.innerHTML = `<div class="tecnology_img"></div>`
+  } else {
+    tabPicture.innerHTML = `
     <source srcset=${tabData.images.webp} type="image/webp" />
     <img src=${tabData.images.png} alt="the ${tabData.name}" />
   `
+  }
 }
 
 function setEventListeners() {
