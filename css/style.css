@@ -544,6 +544,28 @@ p {
   text-transform: uppercase;
 }
 
+.crew picture {
+  border-bottom: 1px solid hsl(var(--clr-white)/0.15);
+}
+.crew .tab-list {
+  --gap: 1rem;
+  margin-top: 2rem;
+}
+.crew article h2 {
+  font-size: var(--fs-500);
+  color: hsl(var(--clr-white)/0.5);
+}
+.crew article h2 + p {
+  font-size: var(--fs-700);
+  font-family: var(--ff-serif);
+  text-transform: uppercase;
+  color: hsl(var(--clr-white));
+}
+.crew article p:last-child {
+  margin-top: 1rem;
+  color: hsl(var(--clr-accent));
+}
+
 .destination .grid-container,
 .crew .grid-container {
   margin-bottom: 2rem;
