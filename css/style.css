@@ -753,6 +753,7 @@ article {
 
 @media (min-width: 768px) {
   .technology .grid-container {
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
     --flow-space: 3rem;
   }
   .technology .numbered-title {
