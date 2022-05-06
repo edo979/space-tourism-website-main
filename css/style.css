@@ -129,6 +129,7 @@ select {
 @media (min-width: 768px) {
   :root {
     --fs-900: 9.375rem;
+    --fs-800: 5rem;
     --fs-500: 1.25rem;
     --fs-400: 1rem;
   }
@@ -597,7 +598,9 @@ article {
   text-align: center;
 }
 .destination_info > p {
+  padding-bottom: 2rem;
   color: hsl(var(--clr-accent));
+  border-bottom: 1px solid hsl(var(--clr-white)/0.15);
 }
 .destination_info h2 {
   font-size: var(--fs-800);
@@ -606,8 +609,6 @@ article {
 }
 .destination_meta {
   margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid hsl(var(--clr-white)/0.15);
   flex-direction: column;
 }
 .destination_meta h3 {
@@ -623,6 +624,31 @@ article {
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .destination {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+  .destination .numbered-title {
+    margin-top: 2rem;
+    justify-self: start;
+  }
+  .destination picture {
+    margin-top: 4rem;
+  }
+  .destination .tab-list {
+    margin-top: 3rem;
+  }
+  .destination_info > p {
+    width: 62ch;
+    margin-inline: auto;
+    padding-bottom: 3rem;
+  }
+  .destination_meta {
+    flex-direction: row;
+    --justify: center;
+    --gap: 6rem;
+  }
+}
 .crew {
   background-image: url(../assets/crew/background-crew-mobile.jpg);
   background-size: 100% calc(100% + 100vw);

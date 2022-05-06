@@ -38,7 +38,9 @@
     text-align: center;
 
     > p {
+      padding-bottom: 2rem;
       color: hsl(var(--clr-accent));
+      border-bottom: 1px solid hsl(var(--clr-white) / 0.15);
     }
 
     h2 {
@@ -50,8 +52,6 @@
 
   &_meta {
     margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid hsl(var(--clr-white) / 0.15);
     flex-direction: column;
 
     h3 {
@@ -67,6 +67,35 @@
       font-size: var(--fs-700);
       font-family: var(--ff-serif);
       text-transform: uppercase;
+    }
+  }
+}
+
+@include mq($md-bp) {
+  .destination {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+
+    .numbered-title {
+      margin-top: 2rem;
+      justify-self: start;
+    }
+    picture {
+      margin-top: 4rem;
+    }
+    .tab-list {
+      margin-top: 3rem;
+    }
+    &_info {
+      > p {
+        width: 62ch;
+        margin-inline: auto;
+        padding-bottom: 3rem;
+      }
+    }
+    &_meta {
+      flex-direction: row;
+      --justify: center;
+      --gap: 6rem;
     }
   }
 }
