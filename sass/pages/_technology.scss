@@ -17,8 +17,10 @@
   // Components:
   picture {
     width: 100%;
+
     img {
-      height: calc(75px + 25.5vw);
+      width: 101%;
+      max-width: 105%;
     }
   }
 

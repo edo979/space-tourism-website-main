@@ -646,7 +646,8 @@ article {
   width: 100%;
 }
 .technology picture img {
-  height: calc(75px + 25.5vw);
+  width: 101%;
+  max-width: 105%;
 }
 .technology .numbered-indicators {
   --flex-dir: row;
