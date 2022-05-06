@@ -13,7 +13,7 @@
     --gap: 1rem;
   }
 
-  .crew_info {
+  &_info {
     text-align: center;
 
     header {
@@ -34,6 +34,46 @@
     > p {
       margin-top: 1rem;
       color: hsl(var(--clr-accent));
+    }
+  }
+}
+
+@include mq($md-bp) {
+  .crew {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+    background-size: top center;
+
+    .grid-container {
+      grid-template-areas:
+        '. title .'
+        '. content .'
+        '. tabs .'
+        '. image .';
+
+      margin-bottom: 0rem;
+    }
+    .numbered-title {
+      margin-top: 2rem;
+      justify-self: start;
+    }
+
+    &_info {
+      margin-top: 3rem;
+      header {
+        h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 2.5rem;
+        }
+      }
+      > p {
+        width: 51ch;
+        margin-inline: auto;
+      }
+    }
+    picture {
+      border: none;
     }
   }
 }
