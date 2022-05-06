@@ -7,6 +7,8 @@
 
   // Layout:
   .grid-container {
+    --flow-space: 2rem;
+
     grid-template-areas:
       '. title .'
       'image image image'
@@ -30,7 +32,7 @@
 
     > * {
       width: 40px;
-      font-size: var(--fs-500);
+      font-size: var(--fs-600);
     }
   }
 
@@ -47,13 +49,31 @@
       p {
         margin-top: 0.25rem;
         font-family: var(--ff-serif);
-        font-size: 1.5rem;
+        font-size: var(--fs-700);
       }
     }
 
     > p {
       margin-top: 1rem;
+      margin-inline: auto;
+      max-width: 48ch;
       color: hsl(var(--clr-accent));
+    }
+  }
+}
+
+@include mq($md-bp) {
+  .technology {
+    .grid-container {
+      --flow-space: 3rem;
+    }
+    .numbered-title {
+      justify-self: start;
+    }
+    .numbered-indicators {
+      > * {
+        width: 60px;
+      }
     }
   }
 }
