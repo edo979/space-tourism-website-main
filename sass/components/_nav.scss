@@ -1,4 +1,9 @@
 .nav {
+  margin-top: 2rem;
+
+  &_logo {
+    margin-left: clamp(1.5rem, 5vw, 3rem);
+  }
   &_list {
     justify-content: start;
     align-items: start;
@@ -20,7 +25,7 @@
 
     &.underline-indicators {
       .active {
-        border: none;
+        border-color: transparent;
       }
     }
 
@@ -44,6 +49,7 @@
   }
 
   &_toggle {
+    margin: 0 clamp(1.5rem, 5vw, 3rem);
     width: 1.5rem;
     aspect-ratio: 1;
     border: none;
@@ -75,16 +81,29 @@
 
 @include mq($md-bp) {
   .nav {
+    margin-top: 0;
+    --gap: 3rem;
+
     &_toggle {
       display: none;
     }
 
     &_list {
+      --underline-gap: 2.5rem;
+
       position: relative;
       inset: auto;
       transform: translateX(0);
       flex-direction: row;
-      padding: 2rem;
+      padding: 0 3rem;
+
+      &.underline-indicators .active {
+        border-color: hsl(var(--clr-white));
+      }
+
+      span {
+        display: none;
+      }
     }
   }
 }
