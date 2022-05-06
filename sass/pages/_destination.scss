@@ -6,6 +6,7 @@
 
   // Grid Layout:
   .grid-container {
+    --flow-space: 2rem;
     margin-bottom: 2rem;
 
     grid-template-areas:
@@ -22,10 +23,10 @@
   }
   picture {
     grid-area: image;
-    margin-top: 2rem;
   }
   .tab-list {
     grid-area: tabs;
+    margin-top: 1rem;
   }
   article {
     grid-area: content;
@@ -78,15 +79,12 @@
   .destination {
     background-image: url(../assets/destination/background-destination-tablet.jpg);
 
+    .grid-container {
+      --flow-space: 2.5rem;
+    }
+
     .numbered-title {
-      margin-top: 2rem;
       justify-self: start;
-    }
-    picture {
-      margin-top: 4rem;
-    }
-    .tab-list {
-      margin-top: 3rem;
     }
     &_info {
       > p {

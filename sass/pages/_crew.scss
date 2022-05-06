@@ -1,4 +1,6 @@
 .crew {
+  --flow-space: 2rem;
+
   background-image: url(../assets/crew/background-crew-mobile.jpg);
   background-size: 100% calc(100% + 100vw);
   background-repeat: no-repeat;
@@ -9,7 +11,6 @@
   }
 
   .tab-list {
-    margin-top: 2.5rem;
     --gap: 1rem;
   }
 
@@ -47,6 +48,8 @@
     background-size: top center;
 
     .grid-container {
+      --flow-space: 2.5rem;
+
       grid-template-areas:
         '. title .'
         '. content .'

@@ -578,6 +578,7 @@ article {
   background-position: center;
 }
 .destination .grid-container {
+  --flow-space: 2rem;
   margin-bottom: 2rem;
   grid-template-areas: ". title ." ". image ." ". tabs ." ". content .";
   justify-items: center;
@@ -587,10 +588,10 @@ article {
 }
 .destination picture {
   grid-area: image;
-  margin-top: 2rem;
 }
 .destination .tab-list {
   grid-area: tabs;
+  margin-top: 1rem;
 }
 .destination article {
   grid-area: content;
@@ -632,15 +633,11 @@ article {
   .destination {
     background-image: url(../assets/destination/background-destination-tablet.jpg);
   }
+  .destination .grid-container {
+    --flow-space: 2.5rem;
+  }
   .destination .numbered-title {
-    margin-top: 2rem;
     justify-self: start;
-  }
-  .destination picture {
-    margin-top: 4rem;
-  }
-  .destination .tab-list {
-    margin-top: 3rem;
   }
   .destination_info > p {
     padding-bottom: 3rem;
@@ -652,6 +649,7 @@ article {
   }
 }
 .crew {
+  --flow-space: 2rem;
   background-image: url(../assets/crew/background-crew-mobile.jpg);
   background-size: 100% calc(100% + 100vw);
   background-repeat: no-repeat;
@@ -661,7 +659,6 @@ article {
   border-bottom: 1px solid hsl(var(--clr-white)/0.15);
 }
 .crew .tab-list {
-  margin-top: 2.5rem;
   --gap: 1rem;
 }
 .crew_info {
@@ -692,6 +689,7 @@ article {
     background-size: top center;
   }
   .crew .grid-container {
+    --flow-space: 2.5rem;
     grid-template-areas: ". title ." ". content ." ". tabs ." ". image .";
     margin-bottom: 0rem;
   }
