@@ -115,8 +115,8 @@ select {
   --ff-sans-normal: "Barlow", sans-serif;
   --fs-900: clamp(5rem, 10vw + 1rem, 9.375rem);
   --fs-800: 3.5rem;
-  --fs-700: 1.75rem;
-  --fs-600: 1.25rem;
+  --fs-700: 1.25rem;
+  --fs-600: 1rem;
   --fs-500: 1rem;
   --fs-400: 0.9375rem;
   --fs-300: 0.9rem;
@@ -130,6 +130,8 @@ select {
   :root {
     --fs-900: 9.375rem;
     --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
     --fs-500: 1.25rem;
     --fs-400: 1rem;
   }
@@ -427,7 +429,7 @@ p {
   border: 1px solid hsl(var(--clr-white)/0.25);
   border-radius: 50%;
   font-family: var(--ff-serif);
-  font-size: var(--fs-600);
+  font-size: var(--fs-500);
   color: hsl(var(--clr-white)/1);
   background-color: transparent;
   cursor: pointer;
@@ -670,11 +672,11 @@ article {
   font-family: var(--ff-serif);
 }
 .crew_info header h2 {
-  font-size: var(--fs-500);
+  font-size: var(--fs-600);
   color: hsl(var(--clr-white)/0.5);
 }
 .crew_info header p {
-  font-size: 1.5rem;
+  font-size: var(--fs-700);
   color: hsl(var(--clr-white));
 }
 .crew_info > p {
@@ -694,17 +696,7 @@ article {
     margin-bottom: 0rem;
   }
   .crew .numbered-title {
-    margin-top: 2rem;
     justify-self: start;
-  }
-  .crew_info {
-    margin-top: 3rem;
-  }
-  .crew_info header h2 {
-    font-size: 1.5rem;
-  }
-  .crew_info header p {
-    font-size: 2.5rem;
   }
   .crew picture {
     border: none;

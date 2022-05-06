@@ -21,12 +21,12 @@
       font-family: var(--ff-serif);
 
       h2 {
-        font-size: var(--fs-500);
+        font-size: var(--fs-600);
         color: hsl(var(--clr-white) / 0.5);
       }
 
       p {
-        font-size: 1.5rem;
+        font-size: var(--fs-700);
         color: hsl(var(--clr-white));
       }
     }
@@ -56,21 +56,9 @@
       margin-bottom: 0rem;
     }
     .numbered-title {
-      margin-top: 2rem;
       justify-self: start;
     }
 
-    &_info {
-      margin-top: 3rem;
-      header {
-        h2 {
-          font-size: 1.5rem;
-        }
-        p {
-          font-size: 2.5rem;
-        }
-      }
-    }
     picture {
       border: none;
     }
