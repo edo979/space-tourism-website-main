@@ -267,7 +267,7 @@ p {
   padding-top: 24px;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 768px) {
   .container {
     padding-inline: 2em;
     margin-inline: auto;
@@ -340,6 +340,18 @@ p {
   .nav_list {
     background: hsl(var(--clr-white)/0.05);
     backdrop-filter: blur(1.5rem);
+  }
+}
+@media (min-width: 768px) {
+  .nav_toggle {
+    display: none;
+  }
+  .nav_list {
+    position: relative;
+    inset: auto;
+    transform: translateX(0);
+    flex-direction: row;
+    padding: 2rem;
   }
 }
 .underline-indicators {

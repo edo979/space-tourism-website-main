@@ -26,8 +26,9 @@
   color: hsl(var(--clr-white));
 }
 
-$md-bp: 35em;
-$lg-bp: 45em;
+$sm-bp: 576px;
+$md-bp: 768px;
+$lg-bp: 992px;
 
 @mixin mq($bp) {
   @media (min-width: $bp) {

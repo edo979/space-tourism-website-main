@@ -72,3 +72,19 @@
     backdrop-filter: blur(1.5rem);
   }
 }
+
+@include mq($md-bp) {
+  .nav {
+    &_toggle {
+      display: none;
+    }
+
+    &_list {
+      position: relative;
+      inset: auto;
+      transform: translateX(0);
+      flex-direction: row;
+      padding: 2rem;
+    }
+  }
+}
