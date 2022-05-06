@@ -38,9 +38,12 @@
     text-align: center;
 
     > p {
+      max-width: 62ch;
+      margin-inline: auto;
       padding-bottom: 2rem;
-      color: hsl(var(--clr-accent));
       border-bottom: 1px solid hsl(var(--clr-white) / 0.15);
+
+      color: hsl(var(--clr-accent));
     }
 
     h2 {
@@ -87,8 +90,6 @@
     }
     &_info {
       > p {
-        width: 62ch;
-        margin-inline: auto;
         padding-bottom: 3rem;
       }
     }

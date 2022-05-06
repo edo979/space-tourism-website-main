@@ -32,7 +32,10 @@
     }
 
     > p {
+      margin-inline: auto;
       margin-top: 1rem;
+      max-width: 51ch;
+
       color: hsl(var(--clr-accent));
     }
   }
@@ -66,10 +69,6 @@
         p {
           font-size: 2.5rem;
         }
-      }
-      > p {
-        width: 51ch;
-        margin-inline: auto;
       }
     }
     picture {

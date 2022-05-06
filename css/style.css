@@ -598,9 +598,11 @@ article {
   text-align: center;
 }
 .destination_info > p {
+  max-width: 62ch;
+  margin-inline: auto;
   padding-bottom: 2rem;
-  color: hsl(var(--clr-accent));
   border-bottom: 1px solid hsl(var(--clr-white)/0.15);
+  color: hsl(var(--clr-accent));
 }
 .destination_info h2 {
   font-size: var(--fs-800);
@@ -639,8 +641,6 @@ article {
     margin-top: 3rem;
   }
   .destination_info > p {
-    width: 62ch;
-    margin-inline: auto;
     padding-bottom: 3rem;
   }
   .destination_meta {
@@ -678,7 +678,9 @@ article {
   color: hsl(var(--clr-white));
 }
 .crew_info > p {
+  margin-inline: auto;
   margin-top: 1rem;
+  max-width: 51ch;
   color: hsl(var(--clr-accent));
 }
 
@@ -703,10 +705,6 @@ article {
   }
   .crew_info header p {
     font-size: 2.5rem;
-  }
-  .crew_info > p {
-    width: 51ch;
-    margin-inline: auto;
   }
   .crew picture {
     border: none;
