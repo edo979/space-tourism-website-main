@@ -2,7 +2,7 @@
   background-image: url(../assets/home/background-home-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: center;
 
   h1 {
     span {
@@ -13,5 +13,27 @@
 
   header {
     text-align: center;
+  }
+}
+
+@include mq($md-bp) {
+  .home {
+    padding-bottom: 5rem;
+
+    background-image: url(../assets/home/background-home-tablet.jpg);
+
+    header {
+      margin-top: 8rem;
+    }
+
+    p {
+      margin-inline: auto;
+      width: 49ch;
+    }
+
+    .large-button {
+      margin-top: 5.5rem;
+      font-size: 2rem;
+    }
   }
 }

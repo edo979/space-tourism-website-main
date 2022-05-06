@@ -14,7 +14,7 @@
   // --fs-300: 1rem;
   // --fs-200: 0.875rem;
 
-  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-900: clamp(5rem, 10vw + 1rem, 9.375rem);
   --fs-800: 3.5rem;
   --fs-700: 1.75rem;
   --fs-600: 1.25rem;
@@ -26,6 +26,14 @@
   --ls-1: 4.75px;
   --ls-2: 2.7px;
   --ls-3: 2.35px;
+}
+
+@include mq($md-bp) {
+  :root {
+    --fs-900: 9.375rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+  }
 }
 
 body {

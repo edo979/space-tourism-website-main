@@ -113,7 +113,7 @@ select {
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
-  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-900: clamp(5rem, 10vw + 1rem, 9.375rem);
   --fs-800: 3.5rem;
   --fs-700: 1.75rem;
   --fs-600: 1.25rem;
@@ -126,6 +126,13 @@ select {
   --ls-3: 2.35px;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --fs-900: 9.375rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+  }
+}
 body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
@@ -505,7 +512,7 @@ p {
   background-image: url(../assets/home/background-home-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: center;
 }
 .home h1 span {
   display: block;
@@ -515,6 +522,23 @@ p {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .home {
+    padding-bottom: 5rem;
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+  .home header {
+    margin-top: 8rem;
+  }
+  .home p {
+    margin-inline: auto;
+    width: 49ch;
+  }
+  .home .large-button {
+    margin-top: 5.5rem;
+    font-size: 2rem;
+  }
+}
 .grid-container {
   margin-bottom: 2rem;
   grid-template-areas: ". title ." ". image ." ". tabs ." ". content .";
