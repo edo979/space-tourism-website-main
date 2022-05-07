@@ -137,6 +137,12 @@ select {
     --fs-300: 1rem;
   }
 }
+@media (min-width: 992px) {
+  :root {
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+  }
+}
 body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
@@ -279,6 +285,19 @@ p {
     padding-inline: 2em;
     margin-inline: auto;
     width: min(80rem, 100%);
+  }
+}
+@media (min-width: 992px) {
+  .lg\:grid-container {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .grid-container,
+.lg\:grid-container {
+    grid-template-columns: minmax(5rem, 1fr) repeat(2, minmax(auto, 555px)) minmax(5rem, 1fr);
   }
 }
 .numbered-title {
@@ -573,6 +592,35 @@ p {
   .home .large-button {
     margin-top: 5.5rem;
     font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .home {
+    display: grid;
+    grid-template-rows: 1fr 100%;
+    background-image: url(../assets/home/background-home-desktop.jpg);
+  }
+  .home .lg\:grid-container {
+    grid-template-areas: ". content cta .";
+    place-content: center;
+    margin-top: clamp(1rem, 5vw, 15rem);
+  }
+  .home .lg\:grid-container :first-child {
+    grid-area: content;
+  }
+  .home .lg\:grid-container :last-child {
+    grid-area: cta;
+    place-self: end;
+    margin: 0;
+  }
+  .home header {
+    text-align: left;
+  }
+  .home header .text-white {
+    margin-block: 1rem !important;
+  }
+  .home header h1 + p {
+    width: 45ch;
   }
 }
 .grid-container {

@@ -54,3 +54,20 @@
     width: min(80rem, 100%);
   }
 }
+
+@include mq($lg-bp) {
+  .lg\:grid-container {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .grid-container,
+  .lg\:grid-container {
+    grid-template-columns:
+      minmax(5rem, 1fr)
+      repeat(2, minmax(auto, 555px))
+      minmax(5rem, 1fr);
+  }
+}

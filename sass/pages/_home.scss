@@ -37,3 +37,39 @@
     }
   }
 }
+
+@include mq($lg-bp) {
+  .home {
+    display: grid;
+    grid-template-rows: 1fr 100%;
+
+    background-image: url(../assets/home/background-home-desktop.jpg);
+
+    .lg\:grid-container {
+      grid-template-areas: '. content cta .';
+      place-content: center;
+      margin-top: clamp(1rem, 5vw, 15rem);
+
+      :first-child {
+        grid-area: content;
+      }
+      :last-child {
+        grid-area: cta;
+        place-self: end;
+        margin: 0;
+      }
+    }
+
+    header {
+      text-align: left;
+
+      .text-white {
+        margin-block: 1rem !important;
+      }
+
+      h1 + p {
+        width: 45ch;
+      }
+    }
+  }
+}
