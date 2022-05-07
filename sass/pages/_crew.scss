@@ -73,14 +73,17 @@
     display: grid;
     grid-template-rows: auto 1fr;
 
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
+    background-position: center bottom 33%;
+
     .grid-container {
       place-content: center;
       margin: 0;
 
       grid-template:
-        '. title image .' 1fr
-        '. content image .' 1fr
-        '. tabs image .' 1fr /
+        '. title image image' 1fr
+        '. content image image' auto
+        '. tabs image image' 1fr /
         1fr
         minmax(35ch, 650px) minmax(35ch, 455px)
         1fr;
@@ -89,8 +92,9 @@
     }
     picture {
       align-self: end;
+      margin: 0;
       img {
-        max-width: 100%;
+        max-width: 80%;
       }
     }
 
@@ -103,6 +107,7 @@
 
       > p {
         max-width: 44ch;
+        margin-inline: 0;
       }
     }
     &_meta {
