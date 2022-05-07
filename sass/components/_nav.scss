@@ -107,3 +107,42 @@
     }
   }
 }
+
+@include mq($lg-bp) {
+  .nav {
+    margin-top: 2.5rem;
+    gap: 4rem;
+
+    &::after {
+      content: '';
+      order: 1;
+      flex: 1 1 100%;
+
+      height: 1px;
+      margin-right: -6rem;
+      position: relative;
+      display: block;
+      z-index: 2;
+
+      background-color: hsl(var(--clr-white) / 0.25);
+    }
+
+    &_logo {
+      flex: 1 0 auto;
+    }
+
+    &_list {
+      order: 2;
+      flex: 1 1 100%;
+      padding-inline-start: min(8rem, 9vw);
+      padding-inline-end: min(10rem, 12vw);
+
+      span {
+        display: inline;
+      }
+    }
+    &_link {
+      display: flex;
+    }
+  }
+}
