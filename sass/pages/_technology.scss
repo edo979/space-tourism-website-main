@@ -65,9 +65,9 @@
 
 @include mq($md-bp) {
   .technology {
-    .grid-container {
-      background-image: url(../assets/technology/background-technology-tablet.jpg);
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
 
+    .grid-container {
       --flow-space: 3rem;
     }
     .numbered-title {
@@ -83,6 +83,8 @@
 
 @include mq($lg-bp) {
   .technology {
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+
     .grid-container {
       align-self: center;
 
@@ -90,18 +92,27 @@
         '. title title .' auto
         '. tabs content image' 1fr /
         minmax(3rem, 0.5fr)
-        auto minmax(45ch, 2fr) minmax(auto, 565px);
+        auto minmax(45ch, 2fr) minmax(auto, 510px);
+      gap: 2rem;
     }
     .numbered-indicators {
       --flex-dir: column;
+      --gap: 2rem;
       margin: 0;
+      > * {
+        width: 80px;
+      }
     }
+
     &_info {
+      margin-top: 0;
       align-self: center;
-      padding-inline-start: 5rem;
-      padding-inline-end: 8rem;
 
       text-align: left;
+      > p {
+        margin-inline: 0;
+        max-width: 43ch;
+      }
     }
   }
 }
