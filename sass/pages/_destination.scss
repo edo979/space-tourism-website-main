@@ -98,3 +98,48 @@
     }
   }
 }
+
+@include mq($lg-bp) {
+  .destination {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    .grid-container {
+      place-content: center;
+      margin: 0;
+
+      grid-template-columns:
+        1fr
+        minmax(35ch, 650px) minmax(35ch, 455px)
+        1fr;
+
+      grid-template-areas:
+        '. title title .'
+        '. image tabs .'
+        '. image content .';
+
+      column-gap: 5rem;
+    }
+    picture {
+      align-self: end;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .tab-list {
+      justify-self: start;
+    }
+    &_info {
+      justify-self: start;
+      text-align: left;
+
+      > p {
+        max-width: 44ch;
+      }
+    }
+    &_meta {
+      --justify: start;
+    }
+  }
+}
