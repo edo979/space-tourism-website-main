@@ -805,6 +805,37 @@ article {
     border: none;
   }
 }
+@media (min-width: 992px) {
+  .crew {
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+  .crew .grid-container {
+    place-content: center;
+    margin: 0;
+    grid-template: ". title image ." 1fr ". content image ." 1fr ". tabs image ." 1fr/1fr minmax(35ch, 650px) minmax(35ch, 455px) 1fr;
+    column-gap: 5rem;
+  }
+  .crew picture {
+    align-self: end;
+  }
+  .crew picture img {
+    max-width: 100%;
+  }
+  .crew .tab-list {
+    justify-self: start;
+  }
+  .crew_info {
+    justify-self: start;
+    text-align: left;
+  }
+  .crew_info > p {
+    max-width: 44ch;
+  }
+  .crew_meta {
+    --justify: start;
+  }
+}
 .technology {
   padding-bottom: 2rem;
   background-image: url(../assets/technology/background-technology-mobile.jpg);
