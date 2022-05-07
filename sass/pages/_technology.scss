@@ -93,7 +93,7 @@
         '. tabs content image' 1fr /
         minmax(3rem, 0.5fr)
         auto minmax(45ch, 2fr) minmax(auto, 510px);
-      gap: 2rem;
+      column-gap: 2rem;
     }
     .numbered-indicators {
       --flex-dir: column;
@@ -102,6 +102,9 @@
       > * {
         width: 80px;
       }
+    }
+    picture {
+      margin: 0;
     }
 
     &_info {

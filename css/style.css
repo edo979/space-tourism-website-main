@@ -832,7 +832,7 @@ article {
     margin: 0;
   }
   .crew picture img {
-    max-width: 80%;
+    max-width: max(70%, 54vh);
   }
   .crew .tab-list {
     justify-self: start;
@@ -920,7 +920,7 @@ article {
   .technology .grid-container {
     align-self: center;
     grid-template: ". title title ." auto ". tabs content image" 1fr/minmax(3rem, 0.5fr) auto minmax(45ch, 2fr) minmax(auto, 510px);
-    gap: 2rem;
+    column-gap: 2rem;
   }
   .technology .numbered-indicators {
     --flex-dir: column;
@@ -929,6 +929,9 @@ article {
   }
   .technology .numbered-indicators > * {
     width: 80px;
+  }
+  .technology picture {
+    margin: 0;
   }
   .technology_info {
     margin-top: 0;
