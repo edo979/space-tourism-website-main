@@ -39,7 +39,8 @@ article {
 @include mq($lg-bp) {
   .crew,
   .destination,
-  .technology {
+  .technology,
+  .home {
     display: grid;
     grid-template-rows: auto 1fr;
   }

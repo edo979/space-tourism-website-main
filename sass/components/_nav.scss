@@ -110,7 +110,7 @@
 
 @include mq($lg-bp) {
   .nav {
-    margin-top: 2.5rem;
+    padding-top: 2.5rem;
     gap: 4rem;
 
     &::after {

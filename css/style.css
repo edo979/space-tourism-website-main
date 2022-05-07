@@ -387,7 +387,7 @@ p {
 }
 @media (min-width: 992px) {
   .nav {
-    margin-top: 2.5rem;
+    padding-top: 2.5rem;
     gap: 4rem;
   }
   .nav::after {
@@ -583,8 +583,7 @@ p {
 }
 @media (min-width: 992px) {
   .home {
-    display: grid;
-    grid-template-rows: 1fr 100%;
+    padding: 0;
     background-image: url(../assets/home/background-home-desktop.jpg);
   }
   .home .lg\:grid-container {
@@ -647,7 +646,8 @@ article {
 @media (min-width: 992px) {
   .crew,
 .destination,
-.technology {
+.technology,
+.home {
     display: grid;
     grid-template-rows: auto 1fr;
   }
