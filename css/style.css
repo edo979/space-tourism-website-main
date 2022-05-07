@@ -732,6 +732,9 @@ article {
   }
 }
 @media (min-width: 992px) {
+  .destination {
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+  }
   .destination .grid-container {
     place-content: center;
     margin: 0;
