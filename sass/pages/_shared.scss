@@ -35,3 +35,12 @@ article {
     }
   }
 }
+
+@include mq($lg-bp) {
+  .crew,
+  .destination,
+  .technology {
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+}

@@ -101,9 +101,6 @@
 
 @include mq($lg-bp) {
   .destination {
-    display: grid;
-    grid-template-rows: auto 1fr;
-
     .grid-container {
       place-content: center;
       margin: 0;

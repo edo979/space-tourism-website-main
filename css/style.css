@@ -644,6 +644,14 @@ article {
   margin-inline: auto;
 }
 
+@media (min-width: 992px) {
+  .crew,
+.destination,
+.technology {
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+}
 .destination {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
   background-size: cover;
@@ -722,10 +730,6 @@ article {
   }
 }
 @media (min-width: 992px) {
-  .destination {
-    display: grid;
-    grid-template-rows: auto 1fr;
-  }
   .destination .grid-container {
     place-content: center;
     margin: 0;
@@ -896,6 +900,22 @@ article {
   }
   .technology .numbered-indicators > * {
     width: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .technology .grid-container {
+    align-self: center;
+    grid-template: ". title title ." auto ". tabs content image" 1fr/minmax(3rem, 0.5fr) auto minmax(45ch, 2fr) minmax(auto, 565px);
+  }
+  .technology .numbered-indicators {
+    --flex-dir: column;
+    margin: 0;
+  }
+  .technology_info {
+    align-self: center;
+    padding-inline-start: 5rem;
+    padding-inline-end: 8rem;
+    text-align: left;
   }
 }
 
